@@ -1,61 +1,72 @@
-A. Directory 'AV5-PDR' contain the following subdirectories:
+A. Directory 'AV5-PDR':
 
-	1. Subdirectory 'grid_files':
- 
-	Include data files from 'AV5-PDR' model grid 
+	Contains data files from 'AV5-PDR' model grid
 
-	File description:
+	model_set_name: p1c01, p10c01, p1c1, p10c1, p1c1_crich (C/O=3.0), p1c1_orich (C/O=0.33)
+	Filename: {model_set_name}_av5pmg.txt
 
-	model_set_name: p1c01, p10c01, p1c1, p10c1
-	Filename: {model_set_name}_av5pmg.dat
-	Column description:
+	Description of columns in each file:
+
 	Col 1. Grid point number  
 	Col 2. Central star effective temperature in K
-	Col 3. Central star luminosity in erg/s^{-1}
-	Col 4. Log of nebular hydrogen density in cm^{-3}
-	Col 5. Radial distance of the ionization front from the centre in cm
-	Col 6. FUV flux in terms of Habing field
-	Col 7. I([C I] 370m) in erg/s/cm^2
-	Col 8. I([C I] 609m) in erg/s/cm^2
-	Col 9. I([C II] 158m) in erg/s/cm^2
-	Col 10. I([O I] 63m) in erg/s/cm^2
-	Col 11. I([O I] 146m) in erg/s/cm^2
+	Col 3. Central star luminosity in solar luminosity
+	Col 4. Log of nebular hydrogen density with hydrogen density in cm^{-3}
+	Col 5. FUV flux in terms of Habing field
+	Col 6. I([C I] 370m) in erg/s
+	Col 7. I([C I] 609m) in erg/s
+	Col 8. I([C II] 158m) in erg/s
+	Col 9. I([O I] 63m) in erg/s
+	Col 10. I([O I] 146m) in erg/s
 
-	2. Subdirectory 'contour_plots': 
 
-	Contains the flux and flux ratio contour plots from different sets of the the model grid.
-	model_set_name: p1c01, p10c01, p1c1, p10c1
-	obs: line flux or flux ratio (rCOIm = OI 63/CII 158; rOIm = OI 146/63)
-	nH: n3p5 = 3.5; n4p0 = 4.0, n4p5 = 4.5  
-	Filename format: {model_set_name}_{obs}_{nH}.png
+B. Directory 'varying-depth-PDR':
 
-B. Directory 'varying-depth-PDR' contain the following files:
-
-	Include data files from 'varying-depth-PDR' model grid
-
-	File description:
+	Contains data files from 'varying-depth-PDR' model grid
 
 	model_set_name: p1c01, p10c01, p1c1, p10c1
-	Log of nebular density in cm^{-3}: 3.5, 4.0, 4.5
-	Filename: {model_set_name}_vdpmg_TL{nH}.dat
-	Column description:
+	Filename: {model_set_name}_vdpmg.dat
+	
+	Description of columns in each file:
+
 	Col 1. PDR depth in cm  
-	Col 2. I([C I] 370m) in erg/s/cm^2
-	Col 3. I([C I] 609m) in erg/s/cm^2
-	Col 4. I([C II] 158m) in erg/s/cm^2
-	Col 5. I([O I] 63m) in erg/s/cm^2
-	Col 6. I([O I] 146m) in erg/s/cm^2
-	Col 7. I([S III] 33m) in erg/s/cm^2
-	Col 8. I([N II] 122m) in erg/s/cm^2
-	Col 9. I([N III] 57m) in erg/s/cm^2
-	Col 10. I([O III] 52m) in erg/s/cm^2
-	Col 11. I([O III] 88m) in erg/s/cm^2
-	Col 12. I(FIR) in erg/s/cm^2
-	Col 13. I(TIR) in erg/s/cm^2
-	Col 14. I(TFIR) in erg/s/cm^2
+	Col 2. I([C I] 370m) in erg/s
+	Col 3. I([C I] 609m) in erg/s
+	Col 4. I([C II] 158m) in erg/s
+	Col 5. I([O I] 63m) in erg/s
+	Col 6. I([O I] 146m) in erg/s
+	Col 7. I([S III] 33m) in erg/s
+	Col 8. I([N II] 122m) in erg/s
+	Col 9. I([N III] 57m) in erg/s
+	Col 10. I([O III] 52m) in erg/s
+	Col 11. I([O III] 88m) in erg/s
+	Col 12. I(FIR) in erg/s
+	Col 13. I(TIR) in erg/s
+	Col 14. I(TFIR) in erg/s
 	Col 15. Dust kinetic temperature in K
 	Col 16. Magnitude of visual extinction 
 	Col 17. Central star effective temperature in K
-	Col 18. Log of central star luminosity in erg/s^{-1}
+	Col 18. Log of central star luminosity in solar luminosity
+	Col 19. Log of nebular hydrogen density with hydrogen density in cm^{-3}
 
 
+C. Directory 'thin-PDR': 
+
+	Contains data from models having `thin' PDRs: the model calculation stops at visual extinction < 1 (indicated along with the filenames)
+
+	Filenames: 
+	p1c1_av02pmg.txt (stop visual extinction = 0.2)
+	p1c1_av05pmg.txt (stop visual extinction = 0.5)
+	p1c1_av1pmg.txt (stop visual extinction = 1)
+
+	Description of columns in each file:
+
+	Col 1. Grid point number  
+	Col 2. Central star effective temperature in K
+	Col 3. Central star luminosity in solar luminosity
+	Col 4. Log of nebular hydrogen density with hydrogen density in cm^{-3}
+	Col 5. FUV flux in terms of Habing field
+	Col 6. I([C I] 370m) in erg/s
+	Col 7. I([C I] 609m) in erg/s
+	Col 8. I([C II] 158m) in erg/s
+	Col 9. I([O I] 63m) in erg/s
+	Col 10. I([O I] 146m) in erg/s
