@@ -51,7 +51,7 @@ B. Directory 'varying-depth-PDR':
 
 C. Directory 'thin-PDR': 
 
-	Contains data from models having `thin' PDRs: the model calculation stops at visual extinction < 1 (indicated along with the filenames)
+	Contains data from models having 'thin' PDRs: the model calculation stops at visual extinction < 1 (indicated along with the filenames)
 
 	Filenames: 
 	p1c1_av02pmg.txt (stop visual extinction = 0.2)
